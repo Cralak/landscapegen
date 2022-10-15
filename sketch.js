@@ -37,7 +37,7 @@ function setup() {
   slider3.position((w/2)-(w/12)+(w/3), 50);
   slider3.style('width', (w/6) + 'px');
 
-  slider4 = createSlider(0.02,0.2, 0.07, 0.01)
+  slider4 = createSlider(0.02,0.2, 0.07, 0.005)
   slider4.position(0-h/5, h/2);
   slider4.size(h/2)
   slider4.style('transform', 'rotate(-90deg)')
