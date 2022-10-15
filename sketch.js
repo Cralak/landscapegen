@@ -8,6 +8,7 @@ let slider1;
 let slider2;
 let slider3;
 let slider4;
+let alphaSlider;
 let val1;
 let val2;
 let val3;
@@ -38,8 +39,13 @@ function setup() {
 
   slider4 = createSlider(0.02,0.2, 0.07, 0.01)
   slider4.position(0-h/5, h/2);
-  slider4.size(h/2, AUTO)
+  slider4.size(h/2)
   slider4.style('transform', 'rotate(-90deg)')
+
+  alphaSlider = createSlider(0, 255, 0, 10)
+  alphaSlider.position(0, h*0.15);
+  alphaSlider.size(h/10)
+  alphaSlider.style('transform', 'rotate(-90deg)')
 
   createCanvas(w,h,WEBGL);
 }
@@ -50,6 +56,7 @@ function draw() {
   val2 = slider2.value();
   val3 = slider3.value();
   val4 = slider4.value();
+  alphaCount = alphaSlider.value();
 
   offsetIncrement = val1;
   noiseRange = val2;
@@ -81,7 +88,7 @@ function draw() {
 
   background(0);
   stroke(0,255,0);
-  noFill();
+  fill(0,255,0,alphaCount);
 
   for(let y = 0; y < rows-1; y++) {
     beginShape(TRIANGLE_STRIP);
