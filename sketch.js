@@ -1,7 +1,7 @@
 let cols, rows;
 w = screen.width;
 h = screen.height;
-let scl = 60;
+let scl = 80;
 cols = (w/scl)*5;
 rows = (h/scl)*5;
 let slider1;
